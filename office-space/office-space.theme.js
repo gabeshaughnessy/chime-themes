@@ -13,11 +13,18 @@ colorset.background = "#222";
 colorset.links = "#fff";
 
 //Images
-bossImage = "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/boss.jpg";
+myImage = "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/me.jpg"
+coworkerImages = Array("https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/boss.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/coworker.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/coworker2.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/coworker3.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/coworker4.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/auditor.jpg", "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/neighbor.jpg","https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/girlfriend.jpg" );
 avatarImages = document.getElementsByClassName('avatar');
 for(var i = 0; i < avatarImages.length; i++){
     if(avatarImages[i].nodeName == 'IMG'){
-    avatarImages[i].src = bossImage;
+            avatarImages[i].src = coworkerImages[i%coworkerImages.length];
+    }
+}
+me = document.getElementsByClassName('me');
+for(var i = 0; i < me.length; i++){
+    if(me[i].getElementsByClassName('avatar')[0].nodeName == 'IMG'){
+        me[i].getElementsByClassName('avatar')[0].src = myImage;
     }
 }
 
