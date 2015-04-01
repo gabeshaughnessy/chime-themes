@@ -13,11 +13,11 @@ colorset.background = "#222";
 colorset.links = "#fff";
 
 //Images
+bossImage = "https://raw.githubusercontent.com/gabeshaughnessy/chime-themes/master/office-space/images/boss.jpg";
 avatarImages = document.getElementsByClassName('avatar');
 for(var i = 0; i < avatarImages.length; i++){
-    console.log(avatarImages[i].nodeName );
-    if(avatarImages[i].nodeName == 'img'){
-    console.log(avatarImages[i].getAttribute('src'));
+    if(avatarImages[i].nodeName == 'IMG'){
+    avatarImages[i].src = bossImage;
     }
 }
 
